@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.edit
+{
+  border: none;
+  background-color: rgb(7, 83, 102);
+  padding-top: 50px;
+  padding-right: 460px;
+  padding-bottom: 50px;
+  padding-left: 450px;
+}
+.border1
+{
+   border: 1px solid black;
+   height: 200px;
+   width: 400px;
+}
+.backimg
+{
+    height:100%;
+    height: 1700px;
+    width: 600px;
+    width:100%;
+    background-image:url(backimg1.png); 
+    background-size: cover; 
+}
+.div1 :hover
+{
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(179,179,179,1);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(179,179,179,1);
+    box-shadow: 0px 0px 14px 0px rgba(179,179,179,1);
+    background-color: rgb(96, 213, 221);
+}
+.div2 :hover
+{
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(179,179,179,1);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(179,179,179,1);
+    box-shadow: 0px 0px 14px 0px rgba(179,179,179,1);
+}
+</style>   
+</head>
+<body onload="popup1()">
+    <div class="div1">
+        <div class="edit">
+            <h1 style="color: white;">Welcome To The Toys Website </h1>
+        </div><br><br>
+    </div>
+    
+
+   <form name="myform" style="text-align: center;">
+     Enter Email: <input  name="email" type="text" size="20"><br><br>
+     <input  value="Submit" type="button" size="20" onclick="validemail()">
+   </form> <br><br>
+
+
+
+<div class="backimg">
+    <h2>Overview</h2><br>
+    <h2>TOYS</h2>
+
+    <div class="border1">
+        <div class="div2">
+            <div><img src="img1.png" height="200px" width="200px">
+            </div>   
+        </div>
+    </div><br>
+    
+    <div class="border1">
+        <div class="div2">
+            <div><img src="img2.png" height="200px" width="200px">
+            </div>  
+        </div>  
+    </div><br>
+
+    <div class="border1">
+        <div class="div2">
+            <div><img src="img3.png" height="200px" width="200px">
+            </div>
+        </div>  
+    </div><br>
+
+    <div class="border1">
+        <div class="div2">
+            <div><img src="imp4.png" height="200px" width="200px">
+            </div>
+        </div> 
+    </div><br>
+
+    <div class="border1">
+        <div class="div2">
+            <div><img src="img5.png" height="200px" width="200px">
+            </div>
+        </div>  
+    </div><br>
+
+    <div class="border1">
+        <div class="div2">
+            <div><img src="img6.png" height="200px" width="200px">
+            </div>
+        </div>     
+    </div><br>
+
+    <div class="border1">
+        <div class="div2">
+            <div><img src="img7.png" height="200px" width="200px">
+            </div>
+        </div>
+    </div><br>
+    
+</div>
+
+
+
+</body>
+
+
+<script type = "text/javascript">
+    function validemail()
+    {
+        var emailvalue=document.myform.email.value;
+        var validationnum=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        if(validationnum.test(validemail) == false)
+        {
+            alert("This email is invalid try again!");
+            return false;
+        }
+        else
+        {
+            alert("This is valid");
+            return true;
+        }        
+    }
+    function popup1()
+    {
+        alert("welcome to website")
+    }
+</script>
+
+</html>
