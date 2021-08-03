@@ -1,3 +1,3 @@
 function redirectToInventory() {
-  location.href = 'inventory.html';
+  location.href = 'home.html';
 }

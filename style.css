@@ -54,3 +54,8 @@ body{
   cursor: pointer;
   margin: 12px 0;
 }
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+}
