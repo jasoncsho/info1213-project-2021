@@ -1,6 +1,14 @@
+ function popup1()
+{
+    const cookie = getCookie("email");
+    alert("Welcome to Our Shop");
+
+}
+
 function redirectToInventory() {
   const email = document.getElementById("username").value;
   if ( isValidEmail(email) ) {
+    register(email);
     location.href = 'home.html';
   } else {
     alert("Your email is invalid. Try again.")
@@ -67,5 +75,37 @@ function validateMembershipForm() {
 
   return true;
 
+}
 
+
+
+function register(name) {
+  var today = new Date()
+  var expires = new Date()
+  expires.setTime(today.getTime() + 1000*60*60*24*365)
+  setCookie("email", name, expires)
+}
+
+// Sets cookie values. Expiration date is optional
+//
+function setCookie(name, value, expire) {
+    document.cookie = name + "=" + escape(value)
+    + ((expire == null) ? "" : ("; expires=" + expire.toGMTString()))
+}
+
+function getCookie(Name) {
+  var search = Name + "="
+  if (document.cookie.length > 0) { // if there are any cookies
+    offset = document.cookie.indexOf(search);
+    if (offset != -1) { // if cookie exists
+      offset += search.length;
+      // set index of beginning of value
+      end = document.cookie.indexOf(";", offset);
+      // set index of end of cookie value
+      if (end == -1) {
+        end = document.cookie.length;
+        return unescape(document.cookie.substring(offset, end));
+      }
+    }
+  }
 }
