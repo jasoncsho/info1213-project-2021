@@ -65,7 +65,7 @@ function validateMembershipForm() {
     return false;
   }
 
-  location.href = 'membershipsuccess.html';
+  return true;
 
 
 }
