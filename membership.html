@@ -9,5 +9,57 @@
   <body>
     <a href="home.html" class="previous">&laquo; Back</a>
      <h1>Membership</h1>
+     <p>Please sign up for your membership.</p>
+     <h1 style="text-align: center;">Membership Registration Form</h1>
+     <form name="RegistrationForm" onsubmit="validateMembershipForm()" method="post">
+        <p>Name: <input type="text" size="65" name="Name" /></p>
+        <br />
+        <p>Age</p>
+        <input type="radio" id="age1" name="age" value="30">
+        <label for="age1">0 - 30</label><br>
+        <input type="radio" id="age2" name="age" value="60">
+        <label for="age2">31 - 60</label><br>  
+        <input type="radio" id="age3" name="age" value="100">
+        <label for="age3">61 - 100</label><br><br>
+
+        <p>Gender</p>
+        <input type="radio" id="male" name="gender" value="m">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="f">
+        <label for="female">Female</label><br>  
+        <input type="radio" id="undefined" name="gender" value="u">
+        <label for="age3">Prefer not to disclose</label><br><br>
+
+        <p>Address: <input type="text" size="65" name="Address" /></p>
+        <br />
+
+        <p>E-mail Address: <input type="text" size="65" name="Email" /></p>
+        <br />
+
+        <p>Password: <input type="text" size="65" name="Password" /></p>
+        <br/>
+
+        <p>Telephone: <input type="text" size="65" name="Telephone" /></p>
+        <br/>
+        
+        <p>Select Membership Type
+            <select type="text" value="" name="Type">
+                <option>Bronze</option>
+                <option>Silver</option>
+                <option>Gold</option>
+                <option>Platinum</option>
+                <option>Diamond</option>
+            </select>
+        </p>
+        <br/>
+        <br/>
+        <p>Comments: <textarea cols="55" name="Comment"> </textarea></p>
+        <p>
+            <input type="submit" 
+                   value="send" name="Submit" />
+            <input type="reset" 
+                   value="Reset" name="Reset" />
+        </p>
+    </form>
   </body>
 </html>
